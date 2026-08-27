@@ -1,0 +1,13 @@
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+# I know this is controversial, but Prettier uses Smart Tabs so it doesn't break
+# anything and it allows the reader to read as they want, and it makes semantic
+# sense, which all really should be enough of an argument.  But since it often
+# isn't, I will add that reader freedom is an accessibility feature.
+# See: https://www.emacswiki.org/emacs/SmartTabs
+#      https://www.reddit.com/r/javascript/s/c6mCGbgTWa
+indent_style = tab
+insert_final_newline = true
