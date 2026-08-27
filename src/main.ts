@@ -4,7 +4,7 @@ import { myName, print } from "kolmafia";
 // line is a string with one parameter.
 export function main(...args: string[]): void {
 	print(`Welcome, ${myName()}!`);
-	print("You have successfully built add-testing!");
+	print("You have successfully built add-testing pull request!");
 	if (args.length > 0) {
 		const argsString = JSON.stringify(args, undefined, "\t");
 		const argWord = args.length === 1 ? "argument" : "arguments";
