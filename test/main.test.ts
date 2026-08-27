@@ -11,6 +11,7 @@ vi.mock("kolmafia", () => ({
 describe("main", () => {
 	beforeEach(() => {
 		vi.resetAllMocks();
+		// Iʼm proud of this part, making it be the author
 		vi.mocked(myName).mockReturnValue("Daniel Houck");
 	});
 
