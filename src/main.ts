@@ -6,7 +6,7 @@ export function main(...args: string[]): void {
 	print(`Welcome, ${myName()}!`);
 	print("You have successfully built add-testing!");
 	if (args.length > 0) {
-		const argsString = JSON.stringify(args, undefined, '\t');
+		const argsString = JSON.stringify(args, undefined, "\t");
 		const argWord = args.length === 1 ? "argument" : "arguments";
 		print(`You called the script with ${args.length} ${argWord}: ${argsString}`);
 	}
