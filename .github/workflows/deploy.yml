@@ -55,7 +55,7 @@ jobs:
           node-version: ${{ env.node-version }}
 
       - name: Test
-        run: yarn run test
+        run: yarn run test --reporter=github-actions
 
   deploy:
     runs-on: ubuntu-latest
