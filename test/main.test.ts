@@ -32,7 +32,7 @@ describe("main", () => {
 		);
 	});
 	it("handles multiple argumensts", () => {
-		// In KoLmafia itself, this is done with `name (arg1, arg2)`
+		// In KoLmafia itself, this is done with `create-kolmafia-test-tests (arg1, arg2)`
 		// It might not be worth handling this in your script
 		main("arg1", "arg2");
 		expect(vi.mocked(print)).toHaveBeenCalledTimes(3);
