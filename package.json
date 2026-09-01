@@ -11,9 +11,14 @@
 		"test": "vitest run",
 		"test:watch": "vitest watch --no-clearScreen",
 		"watch": "concurrently --prefix \"[{name} {time}]\" -t \"HH:mm:ss\" --pad-prefix \"yarn:*:watch\"",
-		"format": "eslint src --fix --ext .ts && NODE_OPTIONS=\"--experimental-strip-types\" prettier --write --list-different .",
-		"lint": "eslint src --ext .ts &&  NODE_OPTIONS=\"--experimental-strip-types\" prettier --check .",
-		"install-mafia": "yarn run build && create-kolmafia-script --install"
+		"style:check": "prettier --check .",
+		"style:fix": "prettier --write --list-different .",
+		"lint:check": "eslint . --ext .ts",
+		"lint:fix": "eslint . --fix --ext .ts",
+		"check": "yarn run lint:check && yarn run style:check",
+		"fix": "yarn run lint:fix && yarn run style:fix",
+		"install-mafia": "yarn run build && create-kolmafia-script --install",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"kolmafia": "latest",
@@ -37,7 +42,9 @@
 		"eslint": "^10.8.1",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-libram": "^0.6.0",
+		"husky": "^9.1.7",
 		"jiti": "^2.6.1",
+		"lint-staged": "^17.4.1",
 		"prettier": "^3.8.1",
 		"ts-checker-rspack-plugin": "^1.6.1",
 		"typescript": "^5.9.3",
