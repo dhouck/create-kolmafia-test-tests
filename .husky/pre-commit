@@ -1,0 +1,2 @@
+# Note: continue-on-error does so for both parallel and series execution; thereʼs no option for just parallel
+yarn run lint-staged --hide-all --continue-on-error
